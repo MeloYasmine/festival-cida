@@ -58,3 +58,13 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## Links Úteis
+
+- **[Angular](https://angular.dev/overview)** - Documentação oficial do Angular
+- **[Cursor](https://cursor.com/)** - IDE baseada em IA
+- **[MCPs](https://modelcontextprotocol.io/docs/getting-started/intro)** - Model Context Protocol - Introdução
+- **[Playwright MCP](https://github.com/microsoft/playwright-mcp)** - Integração Playwright com MCP
+- **[Angular MCP](https://angular.dev/ai/mcp)** - Documentação Angular sobre MCP
+- **[CursorRIPER Framework](https://github.com/johnpeterman72/CursorRIPER)** - Framework CursorRIPER
+- **[Upgrade Angular](https://angular.dev/update-guide)** - Guia de atualização do Angular
