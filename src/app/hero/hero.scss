@@ -1,0 +1,106 @@
+/* Hero Component Styles - Festival CIDA */
+.hero-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #ba68c8 0%, #ce93d8 50%, #e1bee7 100%);
+  background-size: 200% 200%;
+  animation: gradientShift 15s ease infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle texture overlay for depth */
+.hero-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(255, 235, 59, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(255, 235, 59, 0.15) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.hero-content {
+  text-align: center;
+  z-index: 1;
+  padding: 2rem;
+  max-width: 90%;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 8vw, 4.5rem);
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 
+    0 0 20px rgba(255, 235, 59, 0.5),
+    0 4px 8px rgba(0, 0, 0, 0.3);
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Accent highlight on "CIDA" */
+.hero-title::after {
+  content: '';
+  display: block;
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #ffeb3b, transparent);
+  margin: 1.5rem auto 0;
+  animation: expandLine 1.5s ease-out 0.5s both;
+}
+
+/* Animations */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes expandLine {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 120px;
+    opacity: 1;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: clamp(1.5rem, 6vw, 3rem);
+    padding: 0 1rem;
+  }
+  
+  .hero-content {
+    padding: 1rem;
+  }
+}
+
